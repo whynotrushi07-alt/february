@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yay Radha! ❤️</title>
+
+<style>
+    body {
+        background: linear-gradient(135deg, #ff9ecb, #ff65a3);
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+        text-align: center;
+        overflow: hidden;
+    }
+
+    h1 {
+        font-size: 55px;
+        margin-top: 120px;
+        color: #b8005c;
+        animation: fadeIn 2s ease-in-out;
+        padding: 0 20px;
+    }
+
+    p {
+        font-size: 32px;
+        color: #390159;
+        font-weight: 700;
+        animation: fadeIn 2s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+        0% { opacity: 0; transform: translateY(50px); }
+        100% { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Floating hearts */
+    .heart {
+        position: fixed;
+        bottom: -10px;
+        font-size: 24px;
+        color: red;
+        animation: floatUp 5s linear infinite;
+        opacity: 0.8;
+    }
+
+    @keyframes floatUp {
+        0% { transform: translateY(0); opacity: 0.9; }
+        100% { transform: translateY(-110vh); opacity: 0; }
+    }
+</style>
+</head>
+
+<body>
+
+<h1>She Said YES! ❤️🎉</h1>
+<p>RADHA, you just made me the happiest person today 😘</p>
+<p>I Love You So Much Honey 💕</p>
+
+<script>
+    /* Floating hearts */
+    function createHeart() {
+        const heart = document.createElement("div");
+        heart.className = "heart";
+        heart.style.left = Math.random() * window.innerWidth + "px";
+        heart.textContent = "💖";
+        heart.style.fontSize = (22 + Math.random() * 25) + "px";
+        document.body.appendChild(heart);
+
+        setTimeout(() => heart.remove(), 5000);
+    }
+    setInterval(createHeart, 300);
+</script>
+
+</body>
+</html>
